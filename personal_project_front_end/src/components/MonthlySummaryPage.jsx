@@ -5,10 +5,10 @@ function MonthlySummaryPage() {
 
     
   return (
-    <div className="monthly-summary-page">
+    <div className="display-container">
      
-      <button className="home-button">Home</button>
-      <p>Here should display all category sum and total sum</p>
+     
+      <p>Your expense by categories</p>
 
 
 

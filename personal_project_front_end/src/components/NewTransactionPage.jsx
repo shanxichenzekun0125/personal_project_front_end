@@ -5,10 +5,10 @@ function NewTransactionPage() {
 
     
   return (
-    <div className="new-transaction-page">
+    <div className="display-container">
      
-      <button className="home-button">Home</button>
-      <p>Here should display new transaction page</p>
+      
+      <p>Please Enter a New Transaction</p>
 
 
 

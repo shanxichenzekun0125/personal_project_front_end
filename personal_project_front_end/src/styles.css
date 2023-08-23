@@ -1,0 +1,53 @@
+
+
+/* -------------NavBar-------------------------- */
+.site-title {
+    font-size: 1.5rem;
+    color:blue;
+  }
+  
+  .nav {
+    background-color: darksalmon;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+
+    margin-top: 0;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nav a {
+    color: inherit;
+  }
+  
+  .nav li:hover {
+    background-color: blue;
+  }
+
+
+  /* ----------------------------------------Home Page text------------------------------------------ */
+  
+.display-container {
+    background-color: bisque;
+    padding: 2rem;
+    font-family: cursive;
+    width:65rem;
+    height: 22rem;
+
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.display-container ul {
+    list-style: none;
+    align-items:flex-start;
+}

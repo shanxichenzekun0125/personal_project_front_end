@@ -7,17 +7,34 @@ import HomePage from './components/HomePage'
 import NewTransactionPage from './components/NewTransactionPage'
 import ViewHistoryPage from './components/ViewHistoryPage'
 import MonthlySummaryPage from './components/MonthlySummaryPage'
+import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
+
+
+
   return (
     <>
-      {/* <LoginPage/> */}
+      <Navbar/>
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<HomePage/>}/>
+          <Route path="/new" element={<NewTransactionPage/>}/>
+          <Route path="/history" element={<ViewHistoryPage/>}/>
+          <Route path="/report" element={<MonthlySummaryPage/>}/>
+        </Routes>
+
+      </div>
+      
+      {/* <Navbar/> */}
+    
       {/* <HomePage/> */}
-      {/* <NewTransactionPage /> */}
-      {/* <ViewHistoryPage /> */}
-      <MonthlySummaryPage />
+      {/* <NewTransactionPage/> */}
+      {/* <ViewHistoryPage/> */}
+      {/* <MonthlySummaryPage/>  */}
     </>
   )
 }

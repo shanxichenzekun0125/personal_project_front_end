@@ -5,10 +5,10 @@ function ViewHistoryPage() {
 
     
   return (
-    <div className="view-history-page">
+    <div className="display-container">
      
-      <button className="home-button">Home</button>
-      <p>Here should display all transaction history</p>
+    
+      <p>The recent transactons are below</p>
 
 
 

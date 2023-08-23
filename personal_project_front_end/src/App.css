@@ -44,11 +44,15 @@
 
 
 /* HomePage design */
-.button-container{
+
+.nav{}
+
+
+/* .button-container{
   display: flex;
   flex-direction: column;
-  align-items:center; /* Align buttons to the left */
-  margin-top: 20px;
+  align-items:center; /* Align buttons to the left 
+  margin-top: 20px; 
 }
 
 .choice-button {
@@ -58,8 +62,8 @@
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
-  width: 200px; /* Set a fixed width */
-  height: 40px; /* Set a fixed height */
+  width: 200px;
+  height: 40px; 
   text-align: center;
   display: flex;
   justify-content: center;
@@ -68,4 +72,4 @@
 
 .choice-button:hover {
   background-color: #0056b3;
-}
+}  */
