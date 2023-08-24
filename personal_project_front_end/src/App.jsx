@@ -1,42 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from 'react'; // Import the React module
+import SignupPage from "./components/SignupPage"
 import './App.css'
-import LoginPage from './components/LoginPage'
-import HomePage from './components/HomePage'
-import NewTransactionPage from './components/NewTransactionPage'
-import ViewHistoryPage from './components/ViewHistoryPage'
-import MonthlySummaryPage from './components/MonthlySummaryPage'
-import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import LoginPage from './components/LoginPage';
+import ViewHistoryPage from './components/ViewHistoryPage';
 
+
+// Use the function declaration syntax for exporting
 function App() {
-  const [count, setCount] = useState(0)
-
-
-
-
   return (
     <>
-      <Navbar/>
-      <div className='container'>
-        <Routes>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="/new" element={<NewTransactionPage/>}/>
-          <Route path="/history" element={<ViewHistoryPage/>}/>
-          <Route path="/report" element={<MonthlySummaryPage/>}/>
-        </Routes>
-
+      <div>
+        {/* <LoginPage/> */}
+        <ViewHistoryPage />
+        {/* <SignupPage /> */}
       </div>
-      
-      {/* <Navbar/> */}
-    
-      {/* <HomePage/> */}
-      {/* <NewTransactionPage/> */}
-      {/* <ViewHistoryPage/> */}
-      {/* <MonthlySummaryPage/>  */}
     </>
-  )
+  );
 }
 
-export default App
+export default App; // Export the App component
+
