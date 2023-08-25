@@ -1,59 +1,125 @@
 import React, { useState } from 'react';
-import { api } from "../utility";
+import { useNavigate } from 'react-router-dom'; // Use useNavigate
+import { api } from '../utility';
 
-function LoginPage() {
-  const [email, setEmail] = useState('');
+function LoginPage({ setUser }) {
+  const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate(); // Use useNavigate for navigation
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
+  const handleLogin = async () => {
     try {
-      const response = await api.post("user/login/", {
-        email: email,
-        password: password
-      });
+      // Your login API call here
+      // For example:
+      // const response = await api.post('/login', { userName, password });
 
-      // Handle the successful login response here, e.g., store user token
-      console.log("Login successful!", response.data);
+      // Assuming successful login, set the user and navigate to HomePage
+      setUser({ username: userName });
+      navigate('/'); // Navigate to HomePage
     } catch (error) {
-      // Handle the login error here
-      console.error("Error logging in:", error);
-      setErrorMessage("Invalid email or password");
+      console.error('Error logging in:', error);
     }
   };
 
   return (
     <div className="login-page">
-      <h3>Login to Home Expense Tracker</h3>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <form onSubmit={handleSubmit}>
-        <div className="input-group">
-          <label>Email:</label>
+      <h3>Login</h3>
+      <form>
+        <div>
+          <label>Username:</label>
           <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
           />
         </div>
-        <div className="input-group">
+        <div>
           <label>Password:</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
           />
         </div>
-        <button type="submit">Login</button>
+        <div>
+          <button type="button" onClick={handleLogin}>
+            Login
+          </button>
+        </div>
       </form>
     </div>
   );
 }
 
 export default LoginPage;
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import { api } from "../utility";
+
+// function LoginPage() {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [errorMessage, setErrorMessage] = useState('');
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+
+//     try {
+//       const response = await api.post("user/login/", {
+//         email: email,
+//         password: password
+//       });
+
+//       // Handle the successful login response here, e.g., store user token
+//       console.log("Login successful!", response.data);
+//     } catch (error) {
+//       // Handle the login error here
+//       console.error("Error logging in:", error);
+//       setErrorMessage("Invalid email or password");
+//     }
+//   };
+
+//   return (
+//     <div className="login-page">
+//       <h3>Login to Home Expense Tracker</h3>
+//       {errorMessage && <p className="error-message">{errorMessage}</p>}
+//       <form onSubmit={handleSubmit}>
+//         <div className="input-group">
+//           <label>Email:</label>
+//           <input
+//             type="email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//             required
+//           />
+//         </div>
+//         <div className="input-group">
+//           <label>Password:</label>
+//           <input
+//             type="password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//             required
+//           />
+//         </div>
+//         <button type="submit">Login</button>
+//       </form>
+//     </div>
+//   );
+// }
+
+// export default LoginPage;
 
 
 
