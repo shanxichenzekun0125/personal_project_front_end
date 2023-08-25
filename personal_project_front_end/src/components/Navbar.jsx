@@ -10,17 +10,15 @@ export default function Navbar() {
       </Link>
       <ul>
         <li>
-          <Link to="/new">New</Link>
+          <Link to="/new-transaction">New</Link>
         </li>
         <li>
-          <Link to="/history">History</Link>
+          <Link to="/view-history">History</Link>
         </li>
         <li>
-          <Link to="/report">Report</Link>
+          <Link to="/monthly-summary">Report</Link>
         </li>
       </ul>
     </nav>
   );
 }
-
-
