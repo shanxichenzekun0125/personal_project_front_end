@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Use useNavigate
 import { api } from '../utility';
+import SignupPage from './SignupPage'
 
 function LoginPage({ setUser }) {
   const [userName, setUserName] = useState('');
@@ -23,22 +24,22 @@ function LoginPage({ setUser }) {
 
   return (
     <div className="login-page">
-      <h3>Login</h3>
       <form>
         <div>
-          <label>Username:</label>
           <input
             type="text"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
+            placeholder="Enter email"
           />
         </div>
         <div>
-          <label>Password:</label>
+          
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter password"
           />
         </div>
         <div>
@@ -47,6 +48,9 @@ function LoginPage({ setUser }) {
           </button>
         </div>
       </form>
+      <br/>
+      <br/>
+      <SignupPage/>
     </div>
   );
 }

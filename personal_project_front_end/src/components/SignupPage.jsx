@@ -30,16 +30,18 @@ function LoginPage() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h3>Home Expense Track User Signup</h3>
+      <h4>New User Signup</h4>
       <input
         type="email"
         value={userName}
         onChange={(e) => setUserName(e.target.value)}
+        placeholder="Enter email"
       />
       <input
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        placeholder="Enter password"
       />
 
       
