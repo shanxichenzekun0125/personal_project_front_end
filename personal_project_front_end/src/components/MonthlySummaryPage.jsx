@@ -48,14 +48,15 @@ function MonthlySummaryPage() {
   };
 
   return (
-    <div className="monthly-summary-page">
+    <div className="panel">
       <h3>Monthly Summary</h3>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <div>
           <h4>Total Amount: {totalAmount.toFixed(2)}</h4>
-          <h4>Category Summaries:</h4>
+          <div className='report-panel'>
+          <h4>Expense by Categories</h4>
           <ul>
             {Object.entries(categorySummaries).map(([categoryId, amount]) => (
               <li key={categoryId}>
@@ -63,6 +64,7 @@ function MonthlySummaryPage() {
               </li>
             ))}
           </ul>
+          </div>
         </div>
       )}
     </div>

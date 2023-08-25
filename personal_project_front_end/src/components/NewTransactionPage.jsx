@@ -54,11 +54,11 @@ function NewTransactionPage() {
   };
 
   return (
-    <div className="new-transaction-page">
+    <div className="content-container">
+      <div className='panel'>
       <h3>Enter New Transaction</h3>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Category:</label>
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
@@ -72,15 +72,16 @@ function NewTransactionPage() {
           </select>
         </div>
         <div>
-          <label>Amount:</label>
           <input
             type="number"
             value={moneyAmount}
             onChange={(e) => setMoneyAmount(e.target.value)}
+            placeholder='Enter money amount'
           />
         </div>
         <div>
-          <label>Time:</label>
+          <label>Please Select Time (Optional)</label>
+          <br/>
           <input
             type="datetime-local"
             value={time}
@@ -88,21 +89,22 @@ function NewTransactionPage() {
           />
         </div>
         <div>
-          <label>Location:</label>
+      
           <input
             type="text"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
+            placeholder='Location (Optional)'
           />
         </div>
         <div>
-          <label>Note:</label>
-          <textarea value={note} onChange={(e) => setNote(e.target.value)} />
+          <textarea value={note} onChange={(e) => setNote(e.target.value)} placeholder='Put some note here (Optional)'/>
         </div>
         <div>
           <button type="submit">Submit</button>
         </div>
       </form>
+      </div>
     </div>
   );
 }

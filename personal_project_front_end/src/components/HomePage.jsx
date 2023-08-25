@@ -9,7 +9,8 @@ function HomePage() {
   return (
     <>
 
-      <div className='display-container'>
+      <div className='home-container'>
+        <div className='home-panel'>
         <h3>Please choose one from the Nav Bar</h3>
         <ul className='choice'>
           <li><b>New</b>: <i>enter a new transactoin</i></li>
@@ -17,7 +18,12 @@ function HomePage() {
           <li><b>History</b>:<i>view all transaction history</i></li>
           <br/>
           <li><b>Report</b>:<i>expense report by category</i></li>
+          <br/>
+          <li style={{ color: "red" }}>
+              You can always click <b style={{color:"blue"}}>Home Expense Tracker</b> to get back to this home page
+          </li>
         </ul>
+        </div>
       </div>
       
       

@@ -23,7 +23,8 @@ function LoginPage({ setUser }) {
   };
 
   return (
-    <div className="login-page">
+    <div className="content-container">
+      <div className='panel'>
       <form>
         <div>
           <input
@@ -48,9 +49,12 @@ function LoginPage({ setUser }) {
           </button>
         </div>
       </form>
+      </div>
       <br/>
       <br/>
+      <div className='panel'>
       <SignupPage/>
+      </div>
     </div>
   );
 }

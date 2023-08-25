@@ -22,18 +22,23 @@ function ViewHistoryPage() {
   };
     console.log(transactions)
   return (
-    <div className="transaction-list-page">
+    <div className="content-container">
       <h3>Transaction List</h3>
       {loading ? (
         <p>Loading...</p>
       ) : (
         <ul>
           {transactions.map(transaction => (
+            <div className='panel'>
             <li key={transaction.id}>
               <div>Category: {transaction.category}</div>
               <div>Amount: {transaction.money_amount}</div>
-              <div>Time: {transaction.time}</div>
+              <div>Time:{transaction.time}</div>
+              <div>Note: {transaction.note}</div>
             </li>
+            </div>
+
+            
           ))}
         </ul>
       )}

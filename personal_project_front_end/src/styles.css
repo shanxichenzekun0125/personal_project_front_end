@@ -1,3 +1,27 @@
+.entry-page {
+  background-image: url("https://t3.ftcdn.net/jpg/02/81/48/32/360_F_281483212_fafo0892wj9fOuR6V3NOLMuXkMSWVNJ1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90vw;
+  height: 90vh;
+  
+}
+/* ---------------------------------------------content-container----------------------------------------------  */
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 90vh;
+  
+}
+
+.content-container ul {
+  list-style: none;
+}
+
 
 
 /* -------------NavBar-------------------------- */
@@ -14,8 +38,9 @@
     align-items: center;
     gap: 2rem;
     padding: 1rem;
-
+   
     margin-top: 0;
+    width: 87.4vw;
   }
   
   .nav ul {
@@ -35,16 +60,54 @@
 
   /* ----------------------------------------Home Page text------------------------------------------ */
   
-.display-container {
-    background-color: bisque;
+.home-container {
+  
     padding: 2rem;
     font-family: cursive;
-    width:65rem;
-    height: 22rem;
+    width:84.7vw;
+    height: 22.3rem;
 
 }
 
-.display-container ul {
+.home-container ul {
     list-style: none;
     align-items:flex-start;
+}
+
+cont
+
+/* -----------------------panal------------------------------------ */
+.panel ul {
+  list-style: none;
+  align-items: flex-start;
+}
+
+.panel {
+  background-color:rgba(250, 110, 80, 0.8);
+  padding: 0.7rem;
+  border-radius:10px;
+  display:inline-block;
+  margin: 20px;
+  
+
+}
+
+
+.home-panel {
+  background-color:rgba(158, 233, 223, 0.8);
+  padding: 0.7rem;
+  border-radius:10px;
+  display:inline-block;
+  margin: 20px;
+  
+}
+
+.report-panel ul {
+  list-style: none;
+  align-items: flex-start;
+  background-color:rgba(70, 90, 241, 0.8);
+  padding: 0.7rem;
+  border-radius:10px;
+  display:inline-block;
+  margin: 20px;
 }
